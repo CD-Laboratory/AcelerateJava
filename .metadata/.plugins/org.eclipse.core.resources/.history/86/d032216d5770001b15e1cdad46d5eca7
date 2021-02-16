@@ -6,7 +6,6 @@ import javax.persistence.Persistence;
 
 import dominio.Pessoa;
 
-// inserir dados na base
 public class Programa {
 
 	public static void main(String[] args) {

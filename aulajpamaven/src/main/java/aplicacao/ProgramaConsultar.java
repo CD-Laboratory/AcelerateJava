@@ -6,15 +6,10 @@ import javax.persistence.Persistence;
 
 import dominio.Pessoa;
 
-// inserir dados na base
-public class Programa {
+//consultar dados na base
+public class ProgramaConsultar {
 
 	public static void main(String[] args) {
-		
-		// o id é nulo pois o proprio banco de dados o gera
-		Pessoa p1 = new Pessoa(null, "Carlos da Silva", "carlos@gmal.com");
-		Pessoa p2 = new Pessoa(null, "Ana Maria", "ana@gmal.com");
-		Pessoa p3 = new Pessoa(null, "Osvald Prosper", "osvaldo@gmal.com");
 		
 		/*aqui criamos uma instancia do entity manage factory e 
 		* passamos para ela o nome da persistence unit que criamos em persistence.xml
@@ -25,19 +20,17 @@ public class Programa {
 		//iniciar transacao no banco de dados
 		em.getTransaction().begin();
 		
-		// inserindo os objetos no banco de dados
-		em.persist(p1);
-		em.persist(p2);
-		em.persist(p3);
+		//consultar pessoa no banco de dados
+		Pessoa p = em.find(Pessoa.class, 2);
 		
-		//encerro a transacao no banco de dados
-		em.getTransaction().commit();
-		
-		System.out.println("Finalizou!!");
+		System.out.println(p);
+				
+		System.out.println("Pronto, terminou!!");
 		
 		//fechar os entitys
 		em.close();
 		enf.close();
+
 	}
-	
+
 }
