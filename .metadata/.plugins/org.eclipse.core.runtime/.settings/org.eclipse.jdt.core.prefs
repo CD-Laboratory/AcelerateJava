@@ -1,10 +1,10 @@
 eclipse.preferences.version=1
-org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=C\:/sts-4.9.0.RELEASE/
-org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/Program Files/Java/jdk-11.0.10/lib/jrt-fs.jar
-org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/Program Files/Java/jdk-11.0.10/lib/src.zip
+org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=D\:/Program Files/sts-4.9.0.RELEASE/
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=D\:/Program Files/sts-4.9.0.RELEASE/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507/jre/lib/jrt-fs.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=D\:/Program Files/sts-4.9.0.RELEASE/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507/jre/lib/src.zip
 org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
-org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=C\:/sts-4.9.0.RELEASE/plugins/org.junit_4.13.0.v20200204-1500.jar
-org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/jessicsi/.m2/repository
+org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=D\:/Program Files/sts-4.9.0.RELEASE/plugins/org.junit_4.13.0.v20200204-1500.jar
+org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/Dell/.m2/repository
 org.eclipse.jdt.core.codeComplete.argumentPrefixes=
 org.eclipse.jdt.core.codeComplete.argumentSuffixes=
 org.eclipse.jdt.core.codeComplete.fieldPrefixes=
