@@ -10,12 +10,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.programar.cursoop.domain.Categoria;
 import com.programar.cursoop.domain.Produto;
 import com.programar.cursoop.repositories.CategoriaRepository;
+import com.programar.cursoop.repositories.ProdutoRepository;
 
 @SpringBootApplication
 public class CursoopApplication implements CommandLineRunner{
 
 	@Autowired
 	private CategoriaRepository categoriaRepository;
+	
+	@Autowired
+	private ProdutoRepository produtoRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(CursoopApplication.class, args);
@@ -30,9 +34,17 @@ public class CursoopApplication implements CommandLineRunner{
 		Produto p2 = new Produto(null, "Impressora", 800.00);
 		Produto p3 = new Produto(null, "Mouse", 80.00);
 		
+		//associar as categorias aos produtos
+		cat1.getProdutos().addAll(Arrays.asList(p1, p2, p3));
+		cat2.getProdutos().addAll(Arrays.asList(p2));
 		
+		//associar os produtos as categorias
+		p1.getCategorias().addAll(Arrays.asList(cat1));
+		p2.getCategorias().addAll(Arrays.asList(cat1, cat2));
+		p3.getCategorias().addAll(Arrays.asList(cat1));
 		
 		categoriaRepository.saveAll(Arrays.asList(cat1, cat2));
+		produtoRepository.saveAll(Arrays.asList(p1, p2, p3)); 
 	}
 
 }

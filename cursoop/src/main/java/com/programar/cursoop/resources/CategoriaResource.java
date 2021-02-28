@@ -21,7 +21,6 @@ public class CategoriaResource {
 	// este metodo tera o end-point /categorias/id que o usuario informar
 	@RequestMapping(value = "/{id}", method=RequestMethod.GET)
 	public ResponseEntity<?> findCategorias (@PathVariable Integer id) {
-		
 		// o servico acessa os dados, o repository atraves do metodo buscar
 		Categoria obj = service.buscar(id);
 		
