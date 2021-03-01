@@ -1,0 +1,25 @@
+package com.programar.cursoop;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.programar.cursoop.domain.Categoria;
+import com.programar.cursoop.repositories.CategoriaRepository;
+
+@SpringBootApplication
+public class CursoopApplication {
+
+	@Autowired
+	private CategoriaRepository categoriaRepository;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(CursoopApplication.class, args);
+	}
+	
+	public void run(String... args) throws Exception{
+		Categoria cat1 = new Categoria(null, "Informatica");
+		Categoria cat2 = new Categoria(null, "Escritorio");
+	}
+
+}

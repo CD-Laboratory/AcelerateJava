@@ -1,0 +1,5 @@
+package com.programar.cursoop.domain;
+
+public class Categoria {
+
+}

@@ -1,0 +1,5 @@
+package com.programar.cursoop.repositories;
+
+public class CategoriaRepository {
+
+}

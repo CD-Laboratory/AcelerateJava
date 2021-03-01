@@ -1,0 +1,8 @@
+package com.programar.cursoop.domain;
+
+public class Categoria {
+
+	//Atributos
+	private Integer id;
+	private String nome;
+}

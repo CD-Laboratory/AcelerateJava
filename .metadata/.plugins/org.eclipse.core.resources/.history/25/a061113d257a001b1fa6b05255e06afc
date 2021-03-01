@@ -1,0 +1,12 @@
+package com.programar.cursoop.domain;
+
+import com.programar.cursoop.domain.enums.TipoCliente;
+
+public class Cliente {
+
+	private Integer id;
+	private String nome;
+	private String email;
+	private String cpfOucnpj;
+	private TipoCliente tipo;
+}
