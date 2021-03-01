@@ -1,0 +1,10 @@
+package com.programar.cursoop.resources.exceptions;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+//classe auxiliar que intercepta erros
+@ControllerAdvice
+public class ResourceExceptionHandler {
+	
+	
+}

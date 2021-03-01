@@ -1,0 +1,14 @@
+package com.programar.cursoop.domain;
+
+public class Endereco {
+
+	// Atributos
+	private Integer id;
+	private String logradouro;
+	private String numero;
+	private String complemento;
+	private String bairro;
+	private String cep;
+	
+	private Cliente cliente;
+}

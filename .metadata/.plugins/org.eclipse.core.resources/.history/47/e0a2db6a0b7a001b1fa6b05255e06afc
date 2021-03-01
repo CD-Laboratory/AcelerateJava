@@ -1,0 +1,9 @@
+package com.programar.cursoop.domain;
+
+public class Cidade {
+
+	private Integer id;
+	private String nome;
+	
+	
+}
