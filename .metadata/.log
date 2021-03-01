@@ -11453,3 +11453,15 @@ Caused by: java.io.FileNotFoundException: C:\Users\jessicsi\AppData\Local\Progra
 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:108)
 	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:181)
 	... 77 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-28 23:28:47.999
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.UdEKLIPh
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-28 23:28:48.000
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.UdEKLIPh
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-28 23:28:48.002
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-28 23:28:48.003
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.UdEKLIPh => OK
