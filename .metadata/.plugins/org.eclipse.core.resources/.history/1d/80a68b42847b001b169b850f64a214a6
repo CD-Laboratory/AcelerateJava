@@ -1,0 +1,26 @@
+package com.programar.cursoop.domain;
+
+import com.programar.cursoop.domain.enums.EstadoPagamento;
+
+public class Pagamento {
+
+	//Atributo
+	private Integer id;
+	private EstadoPagamento estado;
+
+	//Atributos de associacoes
+	private Pedido pedido;
+
+	//Construtores
+	public Pagamento() {}
+
+	public Pagamento(Integer id, EstadoPagamento estado, Pedido pedido) {
+		super();
+		this.id = id;
+		this.estado = estado;
+		this.pedido = pedido;
+	}
+	
+	//Getters and Setters
+	
+}

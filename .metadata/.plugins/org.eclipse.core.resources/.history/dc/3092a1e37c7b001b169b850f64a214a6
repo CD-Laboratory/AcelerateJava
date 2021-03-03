@@ -1,0 +1,27 @@
+package com.programar.cursoop.services;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.programar.cursoop.domain.Categoria;
+import com.programar.cursoop.domain.Cliente;
+import com.programar.cursoop.repositories.ClienteRepository;
+import com.programar.cursoop.services.exceptions.ObjectNotFoundException;
+
+@Service
+public class ClienteService {
+
+	@Autowired
+	private ClienteRepository rep;
+	
+	public Cliente buscar(Integer id) {
+		// acessa o banco de dados, buscando uma categoria pelo id
+		Optional<Cliente> obj = rep.findById(id);
+		
+		//retornando a categoria e produto, com tratamento de excecao para caso a categoria buscada não exista
+		return obj.orElseThrow(() -> new ObjectNotFoundException(
+				"Objeto não encontrado! Id: " + id + ", Tipo: " + Categoria.class.getName()));
+	}
+}

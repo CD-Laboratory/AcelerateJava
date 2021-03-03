@@ -1,0 +1,14 @@
+package com.programar.cursoop.domain;
+
+import java.util.Date;
+
+public class Pedido {
+
+	//Atributos
+	private Integer id;
+	private Date instante;
+
+	//Atributos de associacoes
+	private Pagamento pagamento;
+	
+}

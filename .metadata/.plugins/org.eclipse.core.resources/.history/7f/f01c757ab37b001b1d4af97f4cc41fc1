@@ -1,0 +1,27 @@
+package com.programar.cursoop.services;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.programar.cursoop.domain.Pedido;
+import com.programar.cursoop.repositories.PedidoRepository;
+import com.programar.cursoop.services.exceptions.ObjectNotFoundException;
+
+@Service
+public class PedidoService {
+
+	@Autowired
+	private PedidoRepository rep;
+	
+	public Pedido buscar(Integer id) {
+		// acessa o banco de dados, buscando uma Pedido pelo id
+		Optional<Pedido> obj = rep.findById(id);
+		
+		//retornando a Pedido e produto, com tratamento de excecao para caso a Pedido buscada não exista
+		return obj.orElseThrow(() -> new ObjectNotFoundException(
+				"Objeto não encontrado! Id: " + id + ", Tipo: " + Pedido.class.getName()));
+	}
+	
+}

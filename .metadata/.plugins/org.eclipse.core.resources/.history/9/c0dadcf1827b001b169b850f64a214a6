@@ -1,0 +1,12 @@
+package com.programar.cursoop.domain;
+
+import java.util.Date;
+
+public class PagamentoComBoleto extends Pagamento{
+
+	//Atributos
+	private Date dataVencimento;
+	private Date dataPagamento;
+	
+	//Construtores
+}
