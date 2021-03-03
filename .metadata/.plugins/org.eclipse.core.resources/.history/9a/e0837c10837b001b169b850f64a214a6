@@ -1,0 +1,17 @@
+package com.programar.cursoop.domain;
+
+public class PagamentoComCartao extends Pagamento{
+
+	//Atributos
+	private Integer numeroDeParcelas;
+	
+	//Construtores
+	public PagamentoComCartao() {}
+
+	public PagamentoComCartao(Integer numeroDeParcelas) {
+		super();
+		this.numeroDeParcelas = numeroDeParcelas;
+	}
+	
+	
+}

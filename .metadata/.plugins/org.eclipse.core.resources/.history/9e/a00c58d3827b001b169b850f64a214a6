@@ -1,0 +1,14 @@
+package com.programar.cursoop.domain;
+
+import com.programar.cursoop.domain.enums.EstadoPagamento;
+
+public class Pagamento {
+
+	//Atributo
+	private Integer id;
+	private EstadoPagamento estado;
+
+	//Atributos de associacoes
+	private Pedido pedido;
+
+}

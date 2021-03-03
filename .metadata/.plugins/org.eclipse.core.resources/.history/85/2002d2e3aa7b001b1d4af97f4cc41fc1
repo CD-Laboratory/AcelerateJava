@@ -1,0 +1,18 @@
+package com.programar.cursoop.domain;
+
+public class ItemPedido {
+
+	//Atributo composto
+	private ItemPedidoPK id = new ItemPedidoPK();
+	
+	//Atributos 
+	
+	private Double desconto;
+	private Integer quantidade;
+	private Double preco;
+	
+	//Construtor
+    public ItemPedido() {}
+	
+	
+}
