@@ -1,0 +1,15 @@
+package com.programar.cursoop.resources.exceptions;
+
+public class ValidationError extends StandardError{
+
+    //atributos
+	private static final long serialVersionUID = 1L;
+	
+	
+	public ValidationError(Integer status, String msg, Long timeStamp) {
+		super(status, msg, timeStamp);
+		// TODO Auto-generated constructor stub
+	}
+
+
+}

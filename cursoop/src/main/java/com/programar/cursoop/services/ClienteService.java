@@ -15,7 +15,8 @@ public class ClienteService {
 	@Autowired
 	private ClienteRepository rep;
 	
-	public Cliente buscar(Integer id) {
+	// buscar cliente
+	public Cliente find(Integer id) {
 		// acessa o banco de dados, buscando um cliente pelo id
 		Optional<Cliente> obj = rep.findById(id);
 		

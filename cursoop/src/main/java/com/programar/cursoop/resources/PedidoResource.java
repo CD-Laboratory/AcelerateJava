@@ -20,9 +20,9 @@ public class PedidoResource {
   	
 	// este metodo tera o end-point /pedidos/id que o usuario informar
 	@RequestMapping(value = "/{id}", method=RequestMethod.GET)
-	public ResponseEntity<?> findPedidos (@PathVariable Integer id) {
+	public ResponseEntity<Pedido> find (@PathVariable Integer id) {
 		// o servico acessa os dados, o repository atraves do metodo buscar
-		Pedido obj = service.buscar(id);
+		Pedido obj = service.find(id);
 		
 		// retorna a mensagem positiva 
 		return ResponseEntity.ok().body(obj);
