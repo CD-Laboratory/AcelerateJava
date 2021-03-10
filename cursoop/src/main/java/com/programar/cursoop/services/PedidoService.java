@@ -15,7 +15,8 @@ public class PedidoService {
 	@Autowired
 	private PedidoRepository rep;
 	
-	public Pedido buscar(Integer id) {
+	// buscar pedido
+	public Pedido find(Integer id) {
 		// acessa o banco de dados, buscando um pedido pelo id
 		Optional<Pedido> obj = rep.findById(id);
 		

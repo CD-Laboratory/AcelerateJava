@@ -1,0 +1,5 @@
+package com.programar.cursoop.dto;
+
+public class CategoriaDTO {
+
+}

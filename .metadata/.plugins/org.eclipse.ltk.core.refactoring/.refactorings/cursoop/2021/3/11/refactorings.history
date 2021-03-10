@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ObjectNotFoundException.java&apos; to &apos;cursoop/src/main/java/com.programar.cursoop.services.exceptions&apos;&#x0D;&#x0A;- Original project: &apos;cursoop&apos;&#x0D;&#x0A;- Destination element: &apos;cursoop/src/main/java/com.programar.cursoop.services.exceptions&apos;&#x0D;&#x0A;- Original element: &apos;com.programar.cursoop.services.exceptions.ObjectNotFoundException.java&apos;" description="Copy compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.programar.cursoop.services.exceptions" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.programar.cursoop.services.exceptions{ObjectNotFoundException.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1615385452373" units="1" version="1.0"/>
+</session>

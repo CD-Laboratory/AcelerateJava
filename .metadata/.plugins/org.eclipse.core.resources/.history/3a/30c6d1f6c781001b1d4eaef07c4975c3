@@ -1,0 +1,5 @@
+package com.programar.cursoop.resources.exceptions;
+
+public class ValidationError {
+
+}
