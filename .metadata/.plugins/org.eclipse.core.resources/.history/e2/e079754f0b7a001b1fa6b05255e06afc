@@ -1,9 +1,0 @@
-package com.programar.cursoop.domain;
-
-public class Estado {
-
-	private Integer id;
-	private String nome;
-	
-	
-}

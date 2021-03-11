@@ -1,8 +1,0 @@
-package com.programar.cursoop.domain.enums;
-
-
-public enum TipoCliente {
-
-	PESSOAFISICA(1, "Pessoa Física"),
-	PESSOCAJURIDICA(2, "Pessoa Juridíca");
-}

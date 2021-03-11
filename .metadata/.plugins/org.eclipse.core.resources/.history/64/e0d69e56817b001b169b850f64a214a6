@@ -1,8 +1,0 @@
-package com.programar.cursoop.domain;
-
-public class Pagamento {
-
-	//Atributo
-	private Integer id;
-	private EstadoPagammento estado;
-}

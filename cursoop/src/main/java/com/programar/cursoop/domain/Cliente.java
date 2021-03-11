@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -31,9 +32,9 @@ public class Cliente implements Serializable{
 	private String cpfOucnpj;
 	private Integer tipo;
 	
-	//Atrinutos de associacao
-	
-	@OneToMany(mappedBy = "cliente")
+	//Atributos de associacao
+	//o cascade faz com que ao apagar um cliente, seu endereco seja apagado da tabela cliente também 
+	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
 	private List<Endereco> enderecos = new ArrayList<>();
 	
 	//usando set voce garante um conjunto de um tipo, no caso strings, que nao tenha repeticao
@@ -54,7 +55,9 @@ public class Cliente implements Serializable{
 		this.nome = nome;
 		this.email = email;
 		this.cpfOucnpj = cpfOucnpj;
-		this.tipo = tipo.getCod();
+		
+		// se o tipo for null eu atribuo nulo pro campo, senao eu atribuo o codigo
+		this.tipo = (tipo==null) ? null : tipo.getCod();
 	}
 
 	// Getters and Setters

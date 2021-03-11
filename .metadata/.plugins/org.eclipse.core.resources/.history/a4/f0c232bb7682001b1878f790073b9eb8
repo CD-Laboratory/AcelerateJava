@@ -1,0 +1,27 @@
+package com.programar.cursoop.services.validation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+
+import com.programar.cursoop.resources.exceptions.FieldMessage;
+
+public class ClienteInsertValidator implements ConstraintValidator<Nome, Tipo> {
+	@Overridepublic
+	void initialize(Nome ann) {
+	}
+
+	@Override
+	public boolean isValid(Tipo objDto, ConstraintValidatorContext context) {
+		List<FieldMessage> list = new ArrayList<>();
+// inclua os testes aqui, inserindo erros na lista
+		for (FieldMessage e : list) {
+			context.disableDefaultConstraintViolation();
+			context.buildConstraintViolationWithTemplate(e.getMessage()).addPropertyNode(e.getFieldName())
+					.addConstraintViolation();
+		}
+		return list.isEmpty();
+	}
+}

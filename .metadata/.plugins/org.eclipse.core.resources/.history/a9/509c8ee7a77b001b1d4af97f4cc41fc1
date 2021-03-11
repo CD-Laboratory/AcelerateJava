@@ -1,7 +1,0 @@
-package com.programar.cursoop.domain;
-
-public class ItemPedidoPK {
-
-	private Pedido pedido;
-	private Produto produto;
-}

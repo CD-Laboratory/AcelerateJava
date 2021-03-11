@@ -1,6 +1,0 @@
-package com.programar.cursoop.domain.enums;
-
-//Implementacao basica
-public enum TipoCliente {
-
-}
