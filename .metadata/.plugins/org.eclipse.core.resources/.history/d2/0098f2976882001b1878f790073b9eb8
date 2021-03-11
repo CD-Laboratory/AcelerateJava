@@ -1,0 +1,97 @@
+package com.programar.cursoop.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.programar.cursoop.domain.Cidade;
+import com.programar.cursoop.domain.Cliente;
+import com.programar.cursoop.domain.enums.TipoCliente;
+import com.programar.cursoop.dto.ClienteDTO;
+import com.programar.cursoop.dto.ClienteNewDTO;
+import com.programar.cursoop.repositories.ClienteRepository;
+import com.programar.cursoop.services.exceptions.DataIntegrityException;
+import com.programar.cursoop.services.exceptions.ObjectNotFoundException;
+
+@Service
+public class ClienteService {
+
+	@Autowired
+	private ClienteRepository rep;
+	
+	// buscar cliente
+	public Cliente find(Integer id) {
+		// acessa o banco de dados, buscando um cliente pelo id
+		Optional<Cliente> obj = rep.findById(id);
+		
+		//retornando o cliente, com tratamento de excecao para caso i cliente buscado não exista
+		return obj.orElseThrow(() -> new ObjectNotFoundException(
+				"Objeto não encontrado! Id: " + id + ", Tipo: " + Cliente.class.getName()));
+	}
+	
+	// inserir na tabela cliente
+	@Transactional
+	public Cliente insert(Cliente obj) {
+		obj.setId(null);
+		obj = rep.save(obj);
+		enderecoRepository.saveAll(obj.getEnderecos());
+		return obj;
+	}
+	
+	// atualizar uma cliente da tabela cliente
+	public Cliente update(Cliente obj) {
+		Cliente newObj = find(obj.getId());
+		updateData(newObj, obj);
+		return rep.save(newObj);
+	}
+	
+	//deletar cliente
+	public void delete(Integer id) {
+		find(id);
+		
+		try {
+			rep.deleteById(id);
+		} catch (DataIntegrityViolationException e) {
+		
+			throw new DataIntegrityException("Não é possivel excluir porque há entidades relacionadas");
+		}
+	}
+	
+	// listar cliente
+	public List<Cliente> findAll(){
+		return rep.findAll();
+	}
+	
+	// retornar uma pagina de cliente 
+	// ele recebera o numero da pagina - page, o total de linhas por pagina - linesPage, o objeto de ordenacao - orderBy
+	// e a direcao - direction, que nada mais é que informar se sera apresentado em forma crescente ou descencente
+	public Page<Cliente> findPage(Integer page, Integer linesPerPage, String direction, String orderBy){
+		PageRequest pageRequest = PageRequest.of(page, linesPerPage, Direction.valueOf(direction), orderBy);
+		
+		return rep.findAll(pageRequest);
+	}
+	
+	// converter clienteDTO para Cliente
+	public Cliente fromDTO(ClienteDTO objDTO) {
+		Cidade cid = new Cidade(objDTO.getCidadeId(), null, null);
+		return new Cliente(objDTO.getId(), objDTO.getNome(), objDTO.getEmail(), null, null);
+	}
+	
+	public Cliente fromDTO(ClienteNewDTO objDTO) {
+		Cliente cli = new Cliente(null, objDTO.getNome(), objDTO.getEmail(), objDTO.getCpfOucnpj(), TipoCliente.toEnum(objDTO..getTipo()));
+	}
+	
+	//atualizar dados dos campos alterados do cliente
+	private void updateData(Cliente newObj, Cliente obj) {
+		
+		newObj.setNome(obj.getNome());
+		newObj.setEmail(obj.getEmail());
+	}
+}

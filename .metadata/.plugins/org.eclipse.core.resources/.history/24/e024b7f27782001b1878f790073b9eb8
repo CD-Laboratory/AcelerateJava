@@ -1,0 +1,40 @@
+package com.programar.cursoop.services.validation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+
+import com.programar.cursoop.dto.ClienteNewDTO;
+import com.programar.cursoop.resources.exceptions.FieldMessage;
+
+//Cria uma anotação personalizada - neste caso uma validacao para cpf e cnpj que vem de um unico campo
+//ConstraintValidator<Nome da classe que voece esta auxiliando , o tipo da classe que vai receber a anotacao>
+public class ClienteInsertValidator implements ConstraintValidator<ClienteInsert, ClienteNewDTO> {
+
+	//meto de inicializacao
+	@Override
+	public void initialize(ClienteInsert ann) {
+	}
+
+	//metodo para validacao
+	@Override
+	public boolean isValid(ClienteNewDTO objDto, ConstraintValidatorContext context) {
+		List<FieldMessage> list = new ArrayList<>();
+		
+		// aqui coloco as validações dos campos 
+		if(objDto.getTipo() == null) {
+			list.add(new FieldMessage("tipo", "Tipo não pode ser nulo"));
+		}
+		
+        // inclua os testes aqui, inserindo erros na lista
+		for (FieldMessage e : list) {
+			context.disableDefaultConstraintViolation();
+			context.buildConstraintViolationWithTemplate(e.getMessage()).addPropertyNode(e.getFieldName())
+					.addConstraintViolation();
+		}
+		
+		return list.isEmpty();
+	}
+}

@@ -40,8 +40,9 @@ public class CategoriaService {
 	
 	// atualizar uma categoria da tabela categoria
 	public Categoria update(Categoria obj) {
-		find(obj.getId());
-		return rep.save(obj);
+		Categoria newObj = find(obj.getId());
+		updateData(newObj, obj);
+		return rep.save(newObj);
 	}
 	
 	//deletar categoria
@@ -74,4 +75,10 @@ public class CategoriaService {
 	public Categoria fromDTO(CategoriaDTO objDTO) {
 		return new Categoria(objDTO.getId(), objDTO.getNome());
 	}
+	
+	//atualizar dados dos campos alterados da categoria
+	private void updateData(Categoria newObj, Categoria obj) {
+		newObj.setNome(obj.getNome());
+	}
+
 }
