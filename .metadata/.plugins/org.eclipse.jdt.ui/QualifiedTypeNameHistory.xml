@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.hibernate.annotations.Entity"/>
-    <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
-    <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
-    <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.Categoria"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.Estado"/>
     <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.persistence.ElementCollection"/>
     <fullyQualifiedTypeName name="javax.persistence.CollectionTable"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.Cliente"/>
@@ -36,18 +31,33 @@
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="javax.persistence.EmbeddedId"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
-    <fullyQualifiedTypeName name="com.programar.cursoop.domain.ItemPedido"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonBackReference"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonManagedReference"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnore"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonFormat"/>
-    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.dto.ClienteNewDTO"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.Cidade"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="org.hibernate.validator.constraints.br.CPF"/>
-    <fullyQualifiedTypeName name="com.programar.cursoop.resources.exceptions.FieldMessage"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.enums.TipoCliente"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.services.validation.utils.BR"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="com.programar.cursoop.repositories.ClienteRepository"/>
+    <fullyQualifiedTypeName name="com.programar.cursoop.resources.exceptions.FieldMessage"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.HandlerMapping"/>
+    <fullyQualifiedTypeName name="java.lang.SuppressWarnings"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.programar.cursoop.resources.utils.URL"/>
+    <fullyQualifiedTypeName name="java.net.URLDecoder"/>
+    <fullyQualifiedTypeName name="com.programar.cursoop.domain.Produto"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+    <fullyQualifiedTypeName name="com.programar.cursoop.domain.ItemPedido"/>
 </qualifiedTypeNameHistroy>
