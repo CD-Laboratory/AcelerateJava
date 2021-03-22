@@ -1,0 +1,20 @@
+package com.programar.cursoop.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+// classe de configuracao do aplication-test.properties
+@Configuration
+@Profile("test")
+public class TestConfig {
+
+	@Bean
+	public boolean instanciateDataBase() {
+		
+		
+		
+		return true;
+	}
+	
+}
