@@ -1,5 +1,0 @@
-package com.programar.cursoop.config;
-
-public class JacksonConfig {
-
-}

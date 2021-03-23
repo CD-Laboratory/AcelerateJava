@@ -1,0 +1,11 @@
+package com.programar.cursoop.services;
+
+import com.programar.cursoop.domain.Pedido;
+
+public abstract class AbstractEmailService implements EmailService{
+
+	@Override
+	public void sendOrderConfirmationEmail(Pedido obj) {
+		
+	}
+}
