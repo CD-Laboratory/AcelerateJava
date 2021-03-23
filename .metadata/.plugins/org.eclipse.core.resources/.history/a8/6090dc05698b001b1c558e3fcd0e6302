@@ -1,0 +1,13 @@
+package com.programar.cursoop.services;
+
+import org.springframework.mail.SimpleMailMessage;
+
+import com.programar.cursoop.domain.Pedido;
+
+public abstract class AbstractEmailService implements EmailService{
+
+	@Override
+	public void sendOrderConfirmationEmail(Pedido obj) {
+		SimpleMailMessage sm = prepareSimpleMailMessageFromPedido(obj);
+	}
+}

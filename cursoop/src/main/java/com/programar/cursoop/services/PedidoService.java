@@ -35,6 +35,12 @@ public class PedidoService {
 	@Autowired
 	private ItemPedidoRepository itemPedidoRepository;
 	
+	@Autowired
+	private ClienteService clienteService;
+	
+	@Autowired
+	private EmailService emailService;
+	
 	// buscar pedido
 	public Pedido find(Integer id) {
 		// acessa o banco de dados, buscando um pedido pelo id
@@ -50,7 +56,8 @@ public class PedidoService {
 	public Pedido insert(Pedido obj) {
 		obj.setId(null);
 		obj.setInstante(new Date());
-		obj.getPagamento().setEstado(EstadoPagamento.PENDENTE);;
+		obj.setCliente(clienteService.find(obj.getCliente().getId()));
+		obj.getPagamento().setEstado(EstadoPagamento.PENDENTE);
 		obj.getPagamento().setPedido(obj);
 		
 		if (obj.getPagamento() instanceof PagamentoComBoleto) {
@@ -71,6 +78,8 @@ public class PedidoService {
 		}
 		
 		itemPedidoRepository.saveAll(obj.getItens());
+		
+		emailService.sendOderConfirmationEmail(obj);
 		
 		return obj; 
 	}

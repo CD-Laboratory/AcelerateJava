@@ -1,0 +1,6 @@
+package com.programar.cursoop.services;
+
+public interface EmailService {
+
+	void sendOrderConfirmationEmail(Pedido obj);
+}

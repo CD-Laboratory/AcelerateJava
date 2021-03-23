@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
-    <fullyQualifiedTypeName name="javax.persistence.ElementCollection"/>
-    <fullyQualifiedTypeName name="javax.persistence.CollectionTable"/>
-    <fullyQualifiedTypeName name="com.programar.cursoop.domain.Cliente"/>
-    <fullyQualifiedTypeName name="com.programar.cursoop.domain.Endereco"/>
-    <fullyQualifiedTypeName name="javax.persistence.MapsId"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
     <fullyQualifiedTypeName name="javax.persistence.Inheritance"/>
     <fullyQualifiedTypeName name="javax.persistence.InheritanceType"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.Pedido"/>
-    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.PagamentoComCartao"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.ItemPedidoPK"/>
     <fullyQualifiedTypeName name="javax.persistence.Embeddable"/>
@@ -29,7 +22,6 @@
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonFormat"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.dto.ClienteNewDTO"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.Cidade"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="org.hibernate.validator.constraints.br.CPF"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.enums.TipoCliente"/>
@@ -49,15 +41,23 @@
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.Produto"/>
     <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable"/>
     <fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
-    <fullyQualifiedTypeName name="com.programar.cursoop.domain.ItemPedido"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonTypeInfo"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonTypeInfo.Id"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonTypeInfo.As"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnore"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.enums.EstadoPagamento"/>
     <fullyQualifiedTypeName name="com.programar.cursoop.domain.PagamentoComBoleto"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+    <fullyQualifiedTypeName name="com.programar.cursoop.domain.ItemPedido"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="java.text.NumberFormat"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="org.springframework.mail.SimpleMailMessage"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
 </qualifiedTypeNameHistroy>

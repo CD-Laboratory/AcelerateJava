@@ -1,0 +1,5 @@
+package com.programar.cursoop.services;
+
+public class AbstractEmailService {
+
+}

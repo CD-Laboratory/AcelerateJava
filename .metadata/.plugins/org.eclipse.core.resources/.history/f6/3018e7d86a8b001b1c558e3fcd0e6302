@@ -1,0 +1,13 @@
+package com.programar.cursoop.services;
+
+import org.springframework.mail.SimpleMailMessage;
+
+public class MockEmailService extends AbstractEmailService{
+
+	@Override
+	public void sendEmail(SimpleMailMessage msg) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
