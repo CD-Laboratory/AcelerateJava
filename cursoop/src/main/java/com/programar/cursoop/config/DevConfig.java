@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import com.programar.cursoop.services.DBService;
+import com.programar.cursoop.services.EmailService;
+import com.programar.cursoop.services.SmtpEmailService;
 
 // classe de configuracao do aplication-dev.properties
 @Configuration
@@ -34,4 +36,8 @@ public class DevConfig {
 		return true;
 	}
 	
+	@Bean
+	public EmailService emailService() { 
+		return new SmtpEmailService();
+	}
 }
