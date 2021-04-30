@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ControllerAdvice"/>
-    <fullyQualifiedTypeName name="com.programar.workshopmongo.services.exception.ObjectNotFoundException"/>
-    <fullyQualifiedTypeName name="com.programar.workshopmongo.resources.exception.StandardError"/>
-    <fullyQualifiedTypeName name="org.springframework.web.client.HttpServerErrorException"/>
-    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
@@ -60,4 +54,10 @@
     <fullyQualifiedTypeName name="com.sun.org.slf4j.internal.LoggerFactory"/>
     <fullyQualifiedTypeName name="com.programar.hrworker.resources.WorkerResource"/>
     <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.server.EnableEurekaServer"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker"/>
+    <fullyQualifiedTypeName name="com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.netflix.zuul.EnableZuulProxy"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.EnableEurekaClient"/>
 </qualifiedTypeNameHistroy>
