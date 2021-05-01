@@ -3,14 +3,14 @@ package com.programar.hrpayroll.entities;
 import java.io.Serializable;
 
 public class Worker implements Serializable {
-	
 	private static final long serialVersionUID = 1L;
-
+	
 	private Long id;
 	private String name;
-	private Double dailyIncome; 
+	private Double dailyIncome;
 	
-	public Worker() {}
+	public Worker() {
+	}
 
 	public Worker(Long id, String name, Double dailyIncome) {
 		super();
